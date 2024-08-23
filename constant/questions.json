@@ -1,0 +1,227 @@
+[
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answerOptions": [
+        {"text": "Saturn", "isCorrect": false},
+        {"text": "Mars", "isCorrect": false},
+        {"text": "Earth", "isCorrect": false},
+        {"text": "Jupiter", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "answerOptions": [
+        {"text": "Mount Everest", "isCorrect": true},
+        {"text": "K2", "isCorrect": false},
+        {"text": "Kangchenjunga", "isCorrect": false},
+        {"text": "Lhotse", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Which country is home to the Great Wall of China?",
+      "answerOptions": [
+        {"text": "China", "isCorrect": true},
+        {"text": "Japan", "isCorrect": false},
+        {"text": "Korea", "isCorrect": false},
+        {"text": "India", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the capital of France?",
+      "answerOptions": [
+        {"text": "London", "isCorrect": false},
+        {"text": "Berlin", "isCorrect": false},
+        {"text": "Paris", "isCorrect": true},
+        {"text": "Rome", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the chemical formula for water?",
+      "answerOptions": [
+        {"text": "H2O", "isCorrect": true},
+        {"text": "CO2", "isCorrect": false},
+        {"text": "NaCl", "isCorrect": false},
+        {"text": "NH3", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the smallest prime number?",
+      "answerOptions": [
+          {"text": "2", "isCorrect": true},
+          {"text": "1", "isCorrect": false},
+          {"text": "3", "isCorrect": false},
+          {"text": "5", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "answerOptions": [
+          {"text": "William Shakespeare", "isCorrect": true},
+          {"text": "Charles Dickens", "isCorrect": false},
+          {"text": "Mark Twain", "isCorrect": false},
+          {"text": "Jane Austen", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which element has the chemical symbol 'O'?",
+      "answerOptions": [
+          {"text": "Oxygen", "isCorrect": true},
+          {"text": "Gold", "isCorrect": false},
+          {"text": "Osmium", "isCorrect": false},
+          {"text": "Oganesson", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What is the fastest land animal?",
+      "answerOptions": [
+          {"text": "Cheetah", "isCorrect": true},
+          {"text": "Lion", "isCorrect": false},
+          {"text": "Elephant", "isCorrect": false},
+          {"text": "Horse", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which planet is closest to the Sun?",
+      "answerOptions": [
+          {"text": "Mercury", "isCorrect": true},
+          {"text": "Venus", "isCorrect": false},
+          {"text": "Earth", "isCorrect": false},
+          {"text": "Mars", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Who painted the Mona Lisa?",
+      "answerOptions": [
+          {"text": "Leonardo da Vinci", "isCorrect": true},
+          {"text": "Vincent van Gogh", "isCorrect": false},
+          {"text": "Pablo Picasso", "isCorrect": false},
+          {"text": "Claude Monet", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What is the hardest natural substance on Earth?",
+      "answerOptions": [
+          {"text": "Diamond", "isCorrect": true},
+          {"text": "Gold", "isCorrect": false},
+          {"text": "Iron", "isCorrect": false},
+          {"text": "Granite", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which organ is responsible for pumping blood throughout the body?",
+      "answerOptions": [
+          {"text": "Heart", "isCorrect": true},
+          {"text": "Liver", "isCorrect": false},
+          {"text": "Kidney", "isCorrect": false},
+          {"text": "Lung", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "How many continents are there on Earth?",
+      "answerOptions": [
+          {"text": "7", "isCorrect": true},
+          {"text": "5", "isCorrect": false},
+          {"text": "6", "isCorrect": false},
+          {"text": "8", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answerOptions": [
+          {"text": "Carbon dioxide", "isCorrect": true},
+          {"text": "Oxygen", "isCorrect": false},
+          {"text": "Nitrogen", "isCorrect": false},
+          {"text": "Hydrogen", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which continent is the Sahara Desert located in?",
+      "answerOptions": [
+          {"text": "Africa", "isCorrect": true},
+          {"text": "Asia", "isCorrect": false},
+          {"text": "Australia", "isCorrect": false},
+          {"text": "South America", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What is the longest river in the world?",
+      "answerOptions": [
+          {"text": "Nile", "isCorrect": true},
+          {"text": "Amazon", "isCorrect": false},
+          {"text": "Yangtze", "isCorrect": false},
+          {"text": "Mississippi", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "In what year did the Titanic sink?",
+      "answerOptions": [
+          {"text": "1912", "isCorrect": true},
+          {"text": "1905", "isCorrect": false},
+          {"text": "1918", "isCorrect": false},
+          {"text": "1923", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which country hosted the 2016 Summer Olympics?",
+      "answerOptions": [
+          {"text": "Brazil", "isCorrect": true},
+          {"text": "China", "isCorrect": false},
+          {"text": "United Kingdom", "isCorrect": false},
+          {"text": "Japan", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What is the main language spoken in Brazil?",
+      "answerOptions": [
+          {"text": "Portuguese", "isCorrect": true},
+          {"text": "Spanish", "isCorrect": false},
+          {"text": "English", "isCorrect": false},
+          {"text": "French", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which animal is known as the 'King of the Jungle'?",
+      "answerOptions": [
+          {"text": "Lion", "isCorrect": true},
+          {"text": "Tiger", "isCorrect": false},
+          {"text": "Elephant", "isCorrect": false},
+          {"text": "Gorilla", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What is the square root of 64?",
+      "answerOptions": [
+          {"text": "8", "isCorrect": true},
+          {"text": "7", "isCorrect": false},
+          {"text": "6", "isCorrect": false},
+          {"text": "9", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Which planet is known as the Red Planet?",
+      "answerOptions": [
+          {"text": "Mars", "isCorrect": true},
+          {"text": "Venus", "isCorrect": false},
+          {"text": "Jupiter", "isCorrect": false},
+          {"text": "Saturn", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "Who is the author of 'Harry Potter'?",
+      "answerOptions": [
+          {"text": "J.K. Rowling", "isCorrect": true},
+          {"text": "J.R.R. Tolkien", "isCorrect": false},
+          {"text": "George R.R. Martin", "isCorrect": false},
+          {"text": "C.S. Lewis", "isCorrect": false}
+      ]
+  },
+  {
+      "question": "What is the largest ocean on Earth?",
+      "answerOptions": [
+          {"text": "Pacific Ocean", "isCorrect": true},
+          {"text": "Atlantic Ocean", "isCorrect": false},
+          {"text": "Indian Ocean", "isCorrect": false},
+          {"text": "Arctic Ocean", "isCorrect": false}
+      ]
+  }
+  ]
