@@ -1,10 +1,11 @@
 "use client";
 
-import SubmitForm from "@/components/SubmitForm";
 import React, { useEffect, useState } from "react";
 import questionsData from "../constant/questions.json";
 import Question from "@/components/Questions";
 import Result from "@/components/Result";
+import { motion } from "framer-motion";
+
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -72,7 +73,6 @@ const Home = () => {
               resetQuiz={resetQuiz}
             />
           )}
-          {/* <SubmitForm /> */}
         </>
       ) : (
         <>
@@ -85,15 +85,23 @@ const Home = () => {
             onLoadedData={handleVideoLoaded}
             style={{ display: videoLoaded ? "block" : "none" }}
           />
-          {!showQuestion && (
-            <button
-              onClick={() => {
-                setShowQuestion(true);
-              }}
-              className="button-73 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  "
-            >
-              Start Quiz
-            </button>
+         {videoLoaded && !showQuestion && (
+        <motion.button
+        initial={{ opacity: 0.5, scale: 0.9, x: "-50%", y: "-50%" }}
+        animate={{ opacity: [0.5, 1, 0.5], scale: [0.9, 1.05, 0.9], x: "-50%", y: "-50%" }}
+        transition={{
+          duration: 3,  // Increased duration to slow down the animation
+          ease: "easeInOut",  // Smooth transition
+          repeat: Infinity,  // Repeat the animation infinitely
+          repeatType: "mirror",  // Reverses the animation for the next iteration
+        }}
+        onClick={() => {
+          setShowQuestion(true);
+        }}
+        className="button-73 absolute top-1/2 left-1/2"
+      >
+        Start Quiz
+      </motion.button>
           )}
 
           {/* Questions Component */}

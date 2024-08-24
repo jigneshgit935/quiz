@@ -16,6 +16,7 @@
     "@mui/material": "^5.16.7",
     "dateformat": "^5.0.3",
     "firebase": "^10.13.0",
+    "framer-motion": "^11.3.30",
     "mongoose": "^8.5.3",
     "next": "14.2.5",
     "react": "^18",
