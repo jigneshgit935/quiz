@@ -2,12 +2,14 @@
 import { Button } from "@mui/joy";
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
-// import Snackbar from "@mui/joy/Snackbar";
-// import PlaylistAddCheckCircleRoundedIcon from "@mui/icons-material/PlaylistAddCheckCircleRounded";
-const SubmitForm = ({ setSubmitTrue }) => {
+import Snackbar from "@mui/joy/Snackbar";
+import PlaylistAddCheckCircleRoundedIcon from "@mui/icons-material/PlaylistAddCheckCircleRounded";
+import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitForm = ({ setSubmitTrue }) => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [openMessage, setOpenMessage] = useState(false);
+  const [responeFalse, setResponeFalse] = useState(null);
+  console.log(openMessage, responeFalse);
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -38,14 +40,16 @@ const SubmitForm = ({ setSubmitTrue }) => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3000/api/users", {
+      const res = await fetch("/api/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
         },
         body: JSON.stringify({ name, phoneNumber: number }),
       });
-      console.log("response", res);
+      const resst = await res.json();
+      console.log(res);
+
       if (res.ok) {
         setSubmitTrue(true);
         console.log("User Created Success");
@@ -54,13 +58,14 @@ const SubmitForm = ({ setSubmitTrue }) => {
         setNumber("");
       } else {
         setOpen(true);
-        setOpenMessage("Wait..");
+        setOpenMessage(resst.message);
         setLoading(false);
         console.log("Something went wrong while creating user");
       }
     } catch (error) {
       setOpen(true);
-      setOpenMessage("Wait..");
+      setResponeFalse(res.ok ? true : false);
+      setOpenMessage(resst.message);
       setLoading(false);
       console.log("Something went wrong", error);
     }
@@ -68,26 +73,29 @@ const SubmitForm = ({ setSubmitTrue }) => {
 
   return (
     <div className="max-w-sm mx-auto">
-      {/* <Snackbar
+      <Snackbar
+      sx={{fontSize:"14px",width:"80%"}}
         variant="soft"
-        color="success"
+        color={responeFalse?"success":"danger"}
         open={open}
         onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        startDecorator={<PlaylistAddCheckCircleRoundedIcon />}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        startDecorator={responeFalse?<PlaylistAddCheckCircleRoundedIcon />:<PhoneDisabledIcon/>}
+        autoHideDuration={3000}
         endDecorator={
           <Button
             onClick={() => setOpen(false)}
             size="sm"
             variant="soft"
-            color="success"
+            color={responeFalse?"success":"danger"}
+
           >
             Dismiss
           </Button>
         }
       >
-        Your message was sent successfully.
-      </Snackbar> */}
+        {openMessage}
+      </Snackbar>
       <div className="flex flex-col gap-5 px-4">
         <div className="flex flex-col gap-1">
           <TextField

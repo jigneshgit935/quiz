@@ -24,7 +24,7 @@ const UserList = () => {
 
   const getUsers = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/users?phoneNumber=${searchNo}`,
+      `/api/users?phoneNumber=${searchNo}`,
       {
         cache: "no-store",
       }
@@ -39,7 +39,7 @@ const UserList = () => {
   };
 
   const confirmDelete = async () => {
-    const res = await fetch(`http://localhost:3000/api/users?id=${idDelete}`, {
+    const res = await fetch(`/api/users?id=${idDelete}`, {
       method: "DELETE",
     });
 
@@ -55,7 +55,7 @@ const UserList = () => {
   };
 
   const UPDATEDONE = async () => {
-    const res = await fetch(`http://localhost:3000/api/users?id=${idDelete}`, {
+    const res = await fetch(`/api/users?id=${idDelete}`, {
       method: "PATCH",
     });
 
