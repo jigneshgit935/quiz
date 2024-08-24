@@ -1,227 +1,183 @@
 [
     {
-      "question": "What is the largest planet in our solar system?",
+      "question": "Who was the demon that Krishna killed by breaking his beak?",
       "answerOptions": [
-        {"text": "Saturn", "isCorrect": false},
-        {"text": "Mars", "isCorrect": false},
-        {"text": "Earth", "isCorrect": false},
-        {"text": "Jupiter", "isCorrect": true}
+        {"text": "Aghasura", "isCorrect": false},
+        {"text": "Bakasura", "isCorrect": true},
+        {"text": "Kesi", "isCorrect": false},
+        {"text": "Trinavarta", "isCorrect": false}
       ]
     },
     {
-      "question": "What is the tallest mountain in the world?",
+      "question": "What was the name of the snake whose many heads Krishna danced upon in the Yamuna River?",
       "answerOptions": [
-        {"text": "Mount Everest", "isCorrect": true},
-        {"text": "K2", "isCorrect": false},
-        {"text": "Kangchenjunga", "isCorrect": false},
-        {"text": "Lhotse", "isCorrect": false}
+        {"text": "Kaliya", "isCorrect": true},
+        {"text": "Vasuki", "isCorrect": false},
+        {"text": "Ananta", "isCorrect": false},
+        {"text": "Takshaka", "isCorrect": false}
       ]
     },
     {
-      "question": "Which country is home to the Great Wall of China?",
+      "question": "Which sage cursed Krishna, leading to the destruction of the Yadava dynasty?",
       "answerOptions": [
-        {"text": "China", "isCorrect": true},
-        {"text": "Japan", "isCorrect": false},
-        {"text": "Korea", "isCorrect": false},
-        {"text": "India", "isCorrect": false}
+        {"text": "Narada", "isCorrect": false},
+        {"text": "Durvasa", "isCorrect": true},
+        {"text": "Parashara", "isCorrect": false},
+        {"text": "Vishwamitra", "isCorrect": false}
       ]
     },
     {
-      "question": "What is the capital of France?",
+      "question": "What was the name of the wrestler defeated by Krishna in the court of Kamsa?",
       "answerOptions": [
-        {"text": "London", "isCorrect": false},
-        {"text": "Berlin", "isCorrect": false},
-        {"text": "Paris", "isCorrect": true},
-        {"text": "Rome", "isCorrect": false}
+        {"text": "Kesi", "isCorrect": false},
+        {"text": "Arishta", "isCorrect": false},
+        {"text": "Chanura", "isCorrect": true},
+        {"text": "Mushtika", "isCorrect": false}
       ]
     },
     {
-      "question": "What is the chemical formula for water?",
+      "question": "Who was the wife of Krishna that he rescued from the demon Narakasura?",
       "answerOptions": [
-        {"text": "H2O", "isCorrect": true},
-        {"text": "CO2", "isCorrect": false},
-        {"text": "NaCl", "isCorrect": false},
-        {"text": "NH3", "isCorrect": false}
+        {"text": "Rukmini", "isCorrect": false},
+        {"text": "Satyabhama", "isCorrect": true},
+        {"text": "Jambavati", "isCorrect": false},
+        {"text": "Kalindi", "isCorrect": false}
       ]
     },
     {
-      "question": "What is the smallest prime number?",
+      "question": "In which forest did Krishna perform the Ras Leela with the Gopis?",
       "answerOptions": [
-          {"text": "2", "isCorrect": true},
-          {"text": "1", "isCorrect": false},
-          {"text": "3", "isCorrect": false},
-          {"text": "5", "isCorrect": false}
+        {"text": "Mathura", "isCorrect": false},
+        {"text": "Gokul", "isCorrect": false},
+        {"text": "Vrindavan", "isCorrect": true},
+        {"text": "Nandgaon", "isCorrect": false}
       ]
-  },
-  {
-      "question": "Who wrote the play 'Romeo and Juliet'?",
+    },
+    {
+      "question": "Which son of Krishna was cursed to remain childless?",
       "answerOptions": [
-          {"text": "William Shakespeare", "isCorrect": true},
-          {"text": "Charles Dickens", "isCorrect": false},
-          {"text": "Mark Twain", "isCorrect": false},
-          {"text": "Jane Austen", "isCorrect": false}
+        {"text": "Pradyumna", "isCorrect": false},
+        {"text": "Samba", "isCorrect": true},
+        {"text": "Aniruddha", "isCorrect": false},
+        {"text": "Bhanu", "isCorrect": false}
       ]
-  },
-  {
-      "question": "Which element has the chemical symbol 'O'?",
+    },
+    {
+      "question": "Who was the demoness who disguised herself as a beautiful woman to kill Krishna, but was instead killed by him?",
       "answerOptions": [
-          {"text": "Oxygen", "isCorrect": true},
-          {"text": "Gold", "isCorrect": false},
-          {"text": "Osmium", "isCorrect": false},
-          {"text": "Oganesson", "isCorrect": false}
+        {"text": "Putana", "isCorrect": true},
+        {"text": "Trijata", "isCorrect": false},
+        {"text": "Holika", "isCorrect": false},
+        {"text": "Hidimba", "isCorrect": false}
       ]
-  },
-  {
-      "question": "What is the fastest land animal?",
+    },
+    {
+      "question": "What was the name of the fruit seller who received divine blessings from Krishna as a child?",
       "answerOptions": [
-          {"text": "Cheetah", "isCorrect": true},
-          {"text": "Lion", "isCorrect": false},
-          {"text": "Elephant", "isCorrect": false},
-          {"text": "Horse", "isCorrect": false}
+        {"text": "Kubja", "isCorrect": true},
+        {"text": "Shabari", "isCorrect": false},
+        {"text": "Gandhari", "isCorrect": false},
+        {"text": "Vrinda", "isCorrect": false}
       ]
-  },
-  {
-      "question": "Which planet is closest to the Sun?",
+    },
+    {
+      "question": "What is the name of the bow Krishna broke at the court of Kamsa?",
       "answerOptions": [
-          {"text": "Mercury", "isCorrect": true},
-          {"text": "Venus", "isCorrect": false},
-          {"text": "Earth", "isCorrect": false},
-          {"text": "Mars", "isCorrect": false}
+        {"text": "Pinaka", "isCorrect": false},
+        {"text": "Sharanga", "isCorrect": true},
+        {"text": "Gandiva", "isCorrect": false},
+        {"text": "Vijaya", "isCorrect": false}
       ]
-  },
-  {
-      "question": "Who painted the Mona Lisa?",
-      "answerOptions": [
-          {"text": "Leonardo da Vinci", "isCorrect": true},
-          {"text": "Vincent van Gogh", "isCorrect": false},
-          {"text": "Pablo Picasso", "isCorrect": false},
-          {"text": "Claude Monet", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "What is the hardest natural substance on Earth?",
-      "answerOptions": [
-          {"text": "Diamond", "isCorrect": true},
-          {"text": "Gold", "isCorrect": false},
-          {"text": "Iron", "isCorrect": false},
-          {"text": "Granite", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "Which organ is responsible for pumping blood throughout the body?",
-      "answerOptions": [
-          {"text": "Heart", "isCorrect": true},
-          {"text": "Liver", "isCorrect": false},
-          {"text": "Kidney", "isCorrect": false},
-          {"text": "Lung", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "How many continents are there on Earth?",
-      "answerOptions": [
-          {"text": "7", "isCorrect": true},
-          {"text": "5", "isCorrect": false},
-          {"text": "6", "isCorrect": false},
-          {"text": "8", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "What gas do plants absorb from the atmosphere?",
-      "answerOptions": [
-          {"text": "Carbon dioxide", "isCorrect": true},
-          {"text": "Oxygen", "isCorrect": false},
-          {"text": "Nitrogen", "isCorrect": false},
-          {"text": "Hydrogen", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "Which continent is the Sahara Desert located in?",
-      "answerOptions": [
-          {"text": "Africa", "isCorrect": true},
-          {"text": "Asia", "isCorrect": false},
-          {"text": "Australia", "isCorrect": false},
-          {"text": "South America", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "What is the longest river in the world?",
-      "answerOptions": [
-          {"text": "Nile", "isCorrect": true},
-          {"text": "Amazon", "isCorrect": false},
-          {"text": "Yangtze", "isCorrect": false},
-          {"text": "Mississippi", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "In what year did the Titanic sink?",
-      "answerOptions": [
-          {"text": "1912", "isCorrect": true},
-          {"text": "1905", "isCorrect": false},
-          {"text": "1918", "isCorrect": false},
-          {"text": "1923", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "Which country hosted the 2016 Summer Olympics?",
-      "answerOptions": [
-          {"text": "Brazil", "isCorrect": true},
-          {"text": "China", "isCorrect": false},
-          {"text": "United Kingdom", "isCorrect": false},
-          {"text": "Japan", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "What is the main language spoken in Brazil?",
-      "answerOptions": [
-          {"text": "Portuguese", "isCorrect": true},
-          {"text": "Spanish", "isCorrect": false},
-          {"text": "English", "isCorrect": false},
-          {"text": "French", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "Which animal is known as the 'King of the Jungle'?",
-      "answerOptions": [
-          {"text": "Lion", "isCorrect": true},
-          {"text": "Tiger", "isCorrect": false},
-          {"text": "Elephant", "isCorrect": false},
-          {"text": "Gorilla", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "What is the square root of 64?",
-      "answerOptions": [
-          {"text": "8", "isCorrect": true},
-          {"text": "7", "isCorrect": false},
-          {"text": "6", "isCorrect": false},
-          {"text": "9", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "Which planet is known as the Red Planet?",
-      "answerOptions": [
-          {"text": "Mars", "isCorrect": true},
-          {"text": "Venus", "isCorrect": false},
-          {"text": "Jupiter", "isCorrect": false},
-          {"text": "Saturn", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "Who is the author of 'Harry Potter'?",
-      "answerOptions": [
-          {"text": "J.K. Rowling", "isCorrect": true},
-          {"text": "J.R.R. Tolkien", "isCorrect": false},
-          {"text": "George R.R. Martin", "isCorrect": false},
-          {"text": "C.S. Lewis", "isCorrect": false}
-      ]
-  },
-  {
-      "question": "What is the largest ocean on Earth?",
-      "answerOptions": [
-          {"text": "Pacific Ocean", "isCorrect": true},
-          {"text": "Atlantic Ocean", "isCorrect": false},
-          {"text": "Indian Ocean", "isCorrect": false},
-          {"text": "Arctic Ocean", "isCorrect": false}
-      ]
-  }
+    },
+    {
+        "question": "Which demon did Krishna kill by pulling him out of a giant cart?",
+        "answerOptions": [
+          {"text": "Trinavarta", "isCorrect": false},
+          {"text": "Vatsasura", "isCorrect": false},
+          {"text": "Shakatasura", "isCorrect": true},
+          {"text": "Bakasura", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Which form of Vishnu did Krishna reveal to Arjuna in the Bhagavad Gita?",
+        "answerOptions": [
+          {"text": "Narasimha", "isCorrect": false},
+          {"text": "Vamana", "isCorrect": false},
+          {"text": "Vishvarupa", "isCorrect": true},
+          {"text": "Kurma", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "What did Krishna use to subdue the serpent Kaliya in the Yamuna River?",
+        "answerOptions": [
+          {"text": "A sword", "isCorrect": false},
+          {"text": "His dance", "isCorrect": true},
+          {"text": "A bow and arrow", "isCorrect": false},
+          {"text": "A conch shell", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Who was Krishna’s childhood friend who was known for his loyalty and devotion?",
+        "answerOptions": [
+          {"text": "Arjuna", "isCorrect": false},
+          {"text": "Sudama", "isCorrect": true},
+          {"text": "Balarama", "isCorrect": false},
+          {"text": "Bhima", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Which divine weapon did Krishna use to kill the demon Narakasura?",
+        "answerOptions": [
+          {"text": "Sudarshana Chakra", "isCorrect": true},
+          {"text": "Trident", "isCorrect": false},
+          {"text": "Brahmastra", "isCorrect": false},
+          {"text": "Vajra", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Which mountain did Krishna lift to protect the villagers of Gokul from Indra’s wrath?",
+        "answerOptions": [
+          {"text": "Govardhan", "isCorrect": true},
+          {"text": "Mandara", "isCorrect": false},
+          {"text": "Meru", "isCorrect": false},
+          {"text": "Kailash", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Which of Krishna’s queens was an incarnation of the goddess Lakshmi?",
+        "answerOptions": [
+          {"text": "Rukmini", "isCorrect": true},
+          {"text": "Satyabhama", "isCorrect": false},
+          {"text": "Jambavati", "isCorrect": false},
+          {"text": "Bhadra", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Which form of Krishna is worshipped during Janmashtami?",
+        "answerOptions": [
+          {"text": "Bal Krishna", "isCorrect": true},
+          {"text": "Gopal", "isCorrect": false},
+          {"text": "Parthasarathy", "isCorrect": false},
+          {"text": "Govinda", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Who was the sage that Krishna visited to request the Sudarshana Chakra?",
+        "answerOptions": [
+          {"text": "Parashurama", "isCorrect": true},
+          {"text": "Agastya", "isCorrect": false},
+          {"text": "Vishwamitra", "isCorrect": false},
+          {"text": "Parashara", "isCorrect": false}
+        ]
+      },
+      {
+        "question": "Which river is associated with the upbringing of Krishna in his foster home?",
+        "answerOptions": [
+          {"text": "Yamuna", "isCorrect": true},
+          {"text": "Ganga", "isCorrect": false},
+          {"text": "Saraswati", "isCorrect": false},
+          {"text": "Godavari", "isCorrect": false}
+        ]
+      }
   ]
+  

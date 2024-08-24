@@ -2,21 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  font-family: poppins;
-  text-align: center;
-}
-
 .question {
   margin: 20px auto;
   width: 95%;
-  border: 4px solid #ddd;
   padding: 15px 25px;
   border-radius: 15px;
+  color: white;
 }
 
 .question h2 {
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 .options {
@@ -27,52 +23,102 @@
   justify-content: space-between;
 }
 
-.options > li > button {
-  margin-bottom: 10px;
+.options .link-li .button-class {
   width: 100%;
-  border: 1px solid green;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  background-color: #d3a803;
+  box-shadow: #7a6402 0 -3px 6px inset;
+  width: 150px;
+  font-size: 0.9rem;
+  padding: 8px 0px;
+  margin: 5px 0px;
   cursor: pointer;
-  /* border: 1px solid grey; */
+  border: none;
 }
 
-button:hover {
-  background-color: green;
-  color: white;
+@media screen and (max-width: 380px) {
+  .options .link-li .button-class {
+    width: 145px;
+    font-size: 0.8rem;
+
+  }
+}
+@media screen and (max-width: 366px) {
+  .options .link-li .button-class {
+    width: 142px;
+    font-size: 0.8rem;
+
+  }
+}
+@media screen and (max-width: 358px) {
+  .options .link-li .button-class {
+    width: 138px;
+    font-size: 0.8rem;
+
+  }
 }
 
-.results {
+.button-class:hover {
+  background-color: #e6b909;
+}
+
+/* .results {
   margin: 20px auto;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
+} */
 
-.results ul {
+/* .results ul {
   list-style: none;
   padding: 0;
-}
+} */
 
-.results span {
+/* .results span {
   color: red;
   font-weight: 800;
   text-decoration: underline;
   cursor: pointer;
-}
+} */
 
-.results li {
+/* .results li {
   margin-bottom: 10px;
-}
+} */
 
-.results li[data-correct="true"] {
+/* .results li[data-correct="true"] {
   color: green;
+} */
+
+/* .results li[data-correct="false"] {
+  color: red;
+} */
+
+/* CSS */
+.button-73 {
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 40em;
+  border-style: none;
+  background-color: #d3a803;
+  box-shadow: #7a6402 0 -3px 6px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+
+  letter-spacing: 2px;
+  outline: none;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  max-width: 220px;
 }
 
-.results li[data-correct="false"] {
-  color: red;
-}
+

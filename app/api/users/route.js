@@ -21,9 +21,19 @@ export async function POST(request) {
     // Connect to MongoDB
     await connectMongoDB();
 
+    const existingUser = await User.findOne({ phoneNumber });
+
+    if (existingUser) {
+      return NextResponse.json(
+        { message: "Phone number already exists" },
+        { status: 409 } // Conflict status
+      );
+    }
+
     // Generate a 6-digit OTP
     const otp = generateAlphaNumericCode();
 
+    // Create the new user
     await User.create({ name, phoneNumber, otp });
 
     return NextResponse.json({ message: "User Created" }, { status: 201 });

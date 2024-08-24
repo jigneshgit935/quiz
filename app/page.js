@@ -15,6 +15,7 @@ const shuffleArray = (array) => {
 };
 
 const Home = () => {
+  const [showQuestion, setShowQuestion] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [questions, setQuestions] = useState([]);
@@ -37,34 +38,67 @@ const Home = () => {
     const shuffledQuestions = shuffleArray([...questionsData]);
     setQuestions(shuffledQuestions.slice(0, 5));
   };
+  const [fadeIn, setFadeIn] = useState(false);
 
+  useEffect(() => {
+    setFadeIn(true);
+
+    return () => {
+      setFadeIn(false);
+    };
+  }, []);
   return (
-    <div className="relative h-screen">
-      <img src="/jFiest222.gif" alt="Animated GIF" className="w-full h-full object-cover" />
-      <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-full bg-yellow-400 max-w-[200px] w-[100%] py-3 shadow-md" >
-        Start Quiz
-      </button>
-      {/* Questions Component */}
-      {/* {currentQuestion < questions.length && (
+    <div className={`relative h-screen container mx-auto max-h-screen min-h-screen max-w-lg
+    transition-opacity duration-1000 ease-in-out ${
+        fadeIn ? "opacity-100" : "opacity-0"
+      }
+    `}>
+      {currentQuestion === questions.length ? (
         <>
-          <div className="border-2 border-blue-500 h-[430px]"></div>
-
-          <Question
-            question={questions[currentQuestion]}
-            onAnswerClick={handleNextQuestion}
-          />
+          {/* Result Component  */}
+          {currentQuestion === questions.length && (
+            <Result
+              userAnswers={userAnswers}
+              questions={questions}
+              resetQuiz={resetQuiz}
+            />
+          )}
+          {/* <SubmitForm /> */}
         </>
-      )} */}
+      ) : (
+        <>
+          <img
+            src="/jFiest222.gif"
+            alt="Animated GIF"
+            className="w-[100%] h-[100%]  object-cove"
+          />
+          {!showQuestion && (
+            <button
+              onClick={() => {
+                setShowQuestion(true);
+              }}
+              className="button-73 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  "
+            >
+              Start Quiz
+            </button>
+          )}
 
-      {/* Result Component  */}
-      {/* {currentQuestion === questions.length && (
-        <Result
-          userAnswers={userAnswers}
-          questions={questions}
-          resetQuiz={resetQuiz}
-        />
-      )} */}
-      {/* <SubmitForm /> */}
+          {/* Questions Component */}
+          {showQuestion && (
+            <>
+              {currentQuestion < questions.length && (
+                <>
+                  <Question
+                    question={questions[currentQuestion]}
+                    onAnswerClick={handleNextQuestion}
+                    questionNumber={currentQuestion + 1}
+                  />
+                </>
+              )}
+            </>
+          )}
+        </>
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@ const Result = ({ userAnswers, questions, resetQuiz = () => {} }) => {
   const [open, setOpen] = useState(false);
 
   const correctAnswers = userAnswers.filter((answer) => answer).length;
+  const [submitTrue, setSubmitTrue] = useState(false);
 
   let offerMessage;
   switch (correctAnswers) {
@@ -33,7 +34,7 @@ const Result = ({ userAnswers, questions, resetQuiz = () => {} }) => {
 
   return (
     <div className="results">
-      {/* <Modal
+      <Modal
         aria-labelledby="modal-title"
         aria-describedby="modal-desc"
         open={open}
@@ -84,22 +85,28 @@ const Result = ({ userAnswers, questions, resetQuiz = () => {} }) => {
             </ul>
           </div>
         </Sheet>
-      </Modal> */}
+      </Modal>
 
-      {/* <h2>Results</h2> */}
+      {submitTrue ? (
+        <>
+          <h2>Results</h2>
 
-      {/* <p>
-        You answered {correctAnswers} out of {questions.length} questions{" "}
-        <span onClick={resetQuiz}>Click here to Retry</span>
-      </p> */}
+          <p>
+            You answered {correctAnswers} out of {questions.length} questions{" "}
+            <span onClick={resetQuiz}>Click here to Retry</span>
+          </p>
 
-      {/* <p>{offerMessage}</p> */}
+          <p>{offerMessage}</p>
 
-      {/* <Button className="" onClick={() => setOpen(true)}>
-        View Answers
-      </Button> */}
-
-      <SubmitForm />
+          <Button className="" onClick={() => setOpen(true)}>
+            View Answers
+          </Button>
+        </>
+      ) : (
+        <>
+          <SubmitForm  setSubmitTrue={setSubmitTrue}/>
+        </>
+      )}
     </div>
   );
 };

@@ -2,9 +2,12 @@
 import { Button } from "@mui/joy";
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
-
-const SubmitForm = () => {
+// import Snackbar from "@mui/joy/Snackbar";
+// import PlaylistAddCheckCircleRoundedIcon from "@mui/icons-material/PlaylistAddCheckCircleRounded";
+const SubmitForm = ({ setSubmitTrue }) => {
   const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [openMessage, setOpenMessage] = useState(false);
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -35,7 +38,7 @@ const SubmitForm = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3002/api/users", {
+      const res = await fetch("http://localhost:3000/api/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -44,15 +47,20 @@ const SubmitForm = () => {
       });
       console.log("response", res);
       if (res.ok) {
+        setSubmitTrue(true);
         console.log("User Created Success");
         setLoading(false);
         setName("");
         setNumber("");
       } else {
+        setOpen(true);
+        setOpenMessage("Wait..");
         setLoading(false);
         console.log("Something went wrong while creating user");
       }
     } catch (error) {
+      setOpen(true);
+      setOpenMessage("Wait..");
       setLoading(false);
       console.log("Something went wrong", error);
     }
@@ -60,6 +68,26 @@ const SubmitForm = () => {
 
   return (
     <div className="max-w-sm mx-auto">
+      {/* <Snackbar
+        variant="soft"
+        color="success"
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        startDecorator={<PlaylistAddCheckCircleRoundedIcon />}
+        endDecorator={
+          <Button
+            onClick={() => setOpen(false)}
+            size="sm"
+            variant="soft"
+            color="success"
+          >
+            Dismiss
+          </Button>
+        }
+      >
+        Your message was sent successfully.
+      </Snackbar> */}
       <div className="flex flex-col gap-5 px-4">
         <div className="flex flex-col gap-1">
           <TextField
