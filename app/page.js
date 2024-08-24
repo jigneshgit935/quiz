@@ -19,6 +19,8 @@ const Home = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [showLoader, setShowLoader] = useState(true);
+
 
   useEffect(() => {
     // Shuffle the questions and select the first 5
@@ -47,59 +49,74 @@ const Home = () => {
       setFadeIn(false);
     };
   }, []);
-  return (
-    <div className={`relative h-screen container mx-auto max-h-screen min-h-screen max-w-lg
-    transition-opacity duration-1000 ease-in-out ${
-        fadeIn ? "opacity-100" : "opacity-0"
-      }
-    `}>
-      {currentQuestion === questions.length ? (
-        <>
-          {/* Result Component  */}
-          {currentQuestion === questions.length && (
-            <Result
-              userAnswers={userAnswers}
-              questions={questions}
-              resetQuiz={resetQuiz}
-            />
-          )}
-          {/* <SubmitForm /> */}
-        </>
-      ) : (
-        <>
-          <img
-            src="/jFiest222.gif"
-            alt="Animated GIF"
-            className="w-[100%] h-[100%]  object-cove"
-          />
-          {!showQuestion && (
-            <button
-              onClick={() => {
-                setShowQuestion(true);
-              }}
-              className="button-73 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  "
-            >
-              Start Quiz
-            </button>
-          )}
 
-          {/* Questions Component */}
-          {showQuestion && (
-            <>
-              {currentQuestion < questions.length && (
-                <>
-                  <Question
-                    question={questions[currentQuestion]}
-                    onAnswerClick={handleNextQuestion}
-                    questionNumber={currentQuestion + 1}
-                  />
-                </>
-              )}
-            </>
-          )}
-        </>
-      )}
-    </div>
+  useEffect(() => {
+    // Display the loader for 3 seconds before showing the quiz
+    const loaderTimeout = setTimeout(() => {
+      setShowLoader(false);
+    }, 2000); // 3 seconds
+
+    return () => clearTimeout(loaderTimeout);
+  }, []);
+  return (
+  <>
+  {
+    showLoader ? "Welcome ":
+    <div className={`relative h-screen container mx-auto max-h-screen min-h-screen max-w-lg
+      transition-opacity duration-1000 ease-in-out ${
+          fadeIn ? "opacity-100" : "opacity-0"
+        }
+      `}>
+        {currentQuestion === questions.length ? (
+          <>
+            {/* Result Component  */}
+            {currentQuestion === questions.length && (
+              <Result
+                userAnswers={userAnswers}
+                questions={questions}
+                resetQuiz={resetQuiz}
+              />
+            )}
+            {/* <SubmitForm /> */}
+          </>
+        ) : (
+          <>
+            <img
+              src="/jFiest222.gif"
+              alt="Animated GIF"
+              className="w-[100%] h-[100%]  object-cove"
+            />
+            {!showQuestion && (
+              <button
+                onClick={() => {
+                  setShowQuestion(true);
+                }}
+                className="button-73 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  "
+              >
+                Start Quiz
+              </button>
+            )}
+  
+            {/* Questions Component */}
+            {showQuestion && (
+              <>
+                {currentQuestion < questions.length && (
+                  <>
+                    <Question
+                      question={questions[currentQuestion]}
+                      onAnswerClick={handleNextQuestion}
+                      questionNumber={currentQuestion + 1}
+                    />
+                  </>
+                )}
+              </>
+            )}
+          </>
+        )}
+      </div>
+
+  }
+  </>
   );
 };
 
