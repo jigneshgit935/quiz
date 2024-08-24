@@ -1,10 +1,20 @@
 "use client";
+
+
+import { Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ["100","200","300","400","500","600","700","800","900"], // Specify weights if needed
+});
 import { Button } from "@mui/joy";
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import Snackbar from "@mui/joy/Snackbar";
 import PlaylistAddCheckCircleRoundedIcon from "@mui/icons-material/PlaylistAddCheckCircleRounded";
-import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitForm = ({ setSubmitTrue }) => {
+import PhoneDisabledIcon from "@mui/icons-material/PhoneDisabled";
+const SubmitForm = ({ setSubmitTrue }) => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [openMessage, setOpenMessage] = useState(false);
@@ -72,23 +82,28 @@ import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitFo
   };
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className={`max-w-sm mx-auto border-2 ${poppins.className}`}>
       <Snackbar
-      sx={{fontSize:"14px",width:"80%"}}
+        sx={{ fontSize: "14px", width: "80%",fontWeight:"400"  }}
         variant="soft"
-        color={responeFalse?"success":"danger"}
+        color={responeFalse ? "success" : "danger"}
         open={open}
         onClose={() => setOpen(false)}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        startDecorator={responeFalse?<PlaylistAddCheckCircleRoundedIcon />:<PhoneDisabledIcon/>}
+        startDecorator={
+          responeFalse ? (
+            <PlaylistAddCheckCircleRoundedIcon />
+          ) : (
+            <PhoneDisabledIcon />
+          )
+        }
         autoHideDuration={3000}
         endDecorator={
           <Button
             onClick={() => setOpen(false)}
             size="sm"
             variant="soft"
-            color={responeFalse?"success":"danger"}
-
+            color={responeFalse ? "success" : "danger"}
           >
             Dismiss
           </Button>
@@ -96,7 +111,7 @@ import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitFo
       >
         {openMessage}
       </Snackbar>
-      <div className="flex flex-col gap-5 px-4">
+      <div className="flex flex-col gap-5 px-4 border-2 mt-10">
         <div className="flex flex-col gap-1">
           <TextField
             onChange={(e, value) => {
@@ -110,9 +125,13 @@ import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitFo
             value={name || ""}
             sx={{ width: "100%" }}
           />
-          {nameWarning && (
-            <span className="text-[12px] text-red-500">Name is required</span>
-          )}
+          <div
+            className={`transition-opacity duration-300 ease-in-out ${
+              nameWarning ? "opacity-100" : "opacity-0"
+            } text-[12px] text-red-500 mt-[-2px] font-[400]`}
+          >
+            Name is required
+          </div>
         </div>
 
         <div className="flex flex-col gap-1">
@@ -129,16 +148,21 @@ import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitFo
             value={number || ""}
             sx={{ width: "100%" }}
           />
-          {numberWarning && (
-            <span className="text-[12px] text-red-500">
-              Mobile No is required
-            </span>
-          )}
-          {numberLength && (
-            <span className="text-[12px] text-red-500">
-              {numberLengthMessage}
-            </span>
-          )}
+          <div
+            className={`transition-opacity duration-300 ease-in-out ${
+              numberWarning ? "opacity-100 " : "opacity-0"
+            } text-[12px] text-red-500 mt-[-2px]  font-[400]`}
+          >
+            Phone number is required
+          </div>
+
+          <div
+            className={`transition-opacity duration-300 ease-in-out ${
+              numberLength ? "opacity-100" : "opacity-0"
+            } text-[12px] text-red-500  mt-[-22px] font-[400]`}
+          >
+            {numberLengthMessage}
+          </div>
         </div>
 
         <Button
@@ -150,7 +174,7 @@ import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';const SubmitFo
           {loading ? "Submitting..." : "Submit"}
         </Button>
       </div>
-      <div className="border-2 border-red-400 mt-10 h-[380px] rounded-full"></div>
+      <div className="border-2 border-red-400 mt-16 h-[380px] rounded-md"></div>
     </div>
   );
 };

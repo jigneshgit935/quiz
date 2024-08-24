@@ -1,9 +1,13 @@
-import { Berkshire_Swash, Inter } from "next/font/google";
+import { Berkshire_Swash, Poppins } from "next/font/google";
 import "./globals.css";
 
 const berkshireSwash = Berkshire_Swash({
   weight: '400', // The only available weight for Berkshire Swash
   subsets: ['latin'], // Choose the appropriate subset
+});
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ["100","200","300","400","500","600","700","800","900"], // Specify weights if needed
 });
 export const metadata = {
   title: "Create Next App",

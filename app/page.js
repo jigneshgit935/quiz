@@ -90,10 +90,10 @@ const Home = () => {
         initial={{ opacity: 0.5, scale: 0.9, x: "-50%", y: "-50%" }}
         animate={{ opacity: [0.5, 1, 0.5], scale: [0.9, 1.05, 0.9], x: "-50%", y: "-50%" }}
         transition={{
-          duration: 3,  // Increased duration to slow down the animation
-          ease: "easeInOut",  // Smooth transition
-          repeat: Infinity,  // Repeat the animation infinitely
-          repeatType: "mirror",  // Reverses the animation for the next iteration
+          duration: 3, 
+          ease: "easeInOut", 
+          repeat: Infinity, 
+          repeatType: "mirror", 
         }}
         onClick={() => {
           setShowQuestion(true);
