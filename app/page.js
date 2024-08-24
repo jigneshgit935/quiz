@@ -19,6 +19,8 @@ const Home = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
 
   useEffect(() => {
     // Shuffle the questions and select the first 5
@@ -48,6 +50,10 @@ const Home = () => {
     };
   }, []);
 
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <div
       className={`relative h-screen container mx-auto max-h-screen min-h-screen max-w-lg
@@ -71,11 +77,13 @@ const Home = () => {
       ) : (
         <>
           <video
-            src="/WhatsApp Video 2024-08-23 at 16.21.47_776177d5.mp4"
+            src="/WhatsApp Video 2024-08-23 at 16.mp4"
             autoPlay
             loop
             muted
-            className="w-[100%] h-[100%] object-fill "
+            className="w-[100%] h-[100%] object-fill"
+            onLoadedData={handleVideoLoaded}
+            style={{ display: videoLoaded ? "block" : "none" }}
           />
           {!showQuestion && (
             <button
